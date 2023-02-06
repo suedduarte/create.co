@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color:#44649c;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;  /* essas propriedades serve para colocar o tamanho do nosso container se ele chegar no final o texto vai quebrar a linha e não aumentar o nosso container quebrando a largura dele*/
+    overflow-wrap: break-word ;
+    
+}
+
+h1,h2{
+    font-weight: 900;
+    color: #44649c;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto; /*0 em cima e embaixo e automaticamente na direita e na esquerda */
+}
+
+main{
+    display: block;
+    background-color: #fff;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding:0 20px;
+}
+
+section.module p{
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+section.module:last-child{
+    margin-bottom: 0; /*para o ultimo filho não ter a margem que há nos demais*/
+}
+
+section.module h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.module.content{ /*é aqui que fica os textos e conteúdos*/
+    padding: 40px 0;
+    background: #dee9ff;
+}
+
+section.module.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important; /*para ser forçado ter 100vh*/
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;/*para a imagem pegar toda a tela*/
+
+}
+
+
+section.module.parallax-1{
+    background-image: url(https://klcconsultants.com/wp-content/uploads/2022/07/pexels-olia-danilevich-8145335-scaled.jpg);
+}
+
+section.module.parallax-2{
+    background-image: url(https://growth99.com/wp-content/uploads/2022/01/Marketing-Marketing-Marketing-for-2022-for-Your-Aesthetic-Business-scaled.jpeg);
+
+}
+
+section.module.parallax-3{
+    background-image: url(https://www.pabau.com/wp-content/uploads/2022/07/Customer-Journey-steps-1.png);
+
+}
+
+section.module.parallax-4{
+    background-image: url(https://www.entrepreneurshipinabox.com/wp-content/uploads/brand-aesthetic.jpg) ;
+}
+
+section.module.parallax-5{
+    background-image: url(https://assets.website-files.com/629767a3b4a5c62d9ac4f16e/62eba504d262c2c197ec0831_download.jpg);
+}
+
+footer{
+    background-color: #3d7ad2 ;
+    color:  #eeede7;
+    text-indent: 10px;
+    display: block;
+    position:relative;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    padding: 2px;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    padding:0;
+    margin: 0;
+}
+
+a{
+    color: #e7eee7 ;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0;
+    padding: 0 4%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+nav .menu-icon{
+    cursor: pointer;
+    display:flex;
+}
+
+nav .logo a{
+    font-size: 30px;
+    font-weight: bold; /*grossura da fonte*/
+    color: #3d7ad2;
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li{
+    padding: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #44649c;
+    
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+nav li a:hover{
+    background-color: #c6dfff;
+}
+
+
+
+@media (max-width:970px) {
+    nav.menu-icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(-100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: o.3s ease-in;
+        background-color: #3d7ad2;
+    }
+    nav ul.active{
+        transform: translateX(0);
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    nav ul li a{
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    nav ul button{
+        background-color: #6ca0f9;
+        font-size: 18px;
+        margin: 10px;
+    }
+    main{
+        flex-direction: column;
+
+    }
+    .text-bx{
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container,
+    .module.parallax,
+    .wrapper, .content
+    {
+        transform: translateX(0);
+
+    }
+}
